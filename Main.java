@@ -10,10 +10,12 @@ public class Main {
 
         recursion.factorialRecursion(5);
 
-        System.out.println("Head recursion: " + recursion.headRecursion(5));
-        System.out.println("Tail recursion: " + recursion.tailRecursion(5));
+        System.out.println("---Head recursion---");
+        recursion.headRec(5);
+        System.out.println("---Tail recursion---");
+        recursion.tailRec(5);
 
-          iteration.factorialIterative(5);
+        iteration.factorialIterative(5);
 
     }
     //fibonacci recursion

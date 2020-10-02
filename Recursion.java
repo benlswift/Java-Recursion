@@ -33,17 +33,37 @@ public class Recursion {
     }
 
     //Head and Tail recursive factorials
-    public int headRecursion(int num){
+    public int headFactorial(int num){
+        int outNum =0;
         if(num > 0){
-            return num*headRecursion(num-1);
+            outNum = num*headFactorial(num-1);
+            return outNum;
         }
+        System.out.println(outNum);
         return 1;
     }
-    public int tailRecursion(int num){
+
+    public int tailRec(int num){
+        if (num==0){
+            return 0;
+        }
+        System.out.println(num);
+        return tailRec(num-1);
+    }
+    public int tailFactorial(int num){
         if(num == 0){
             return 1;
         }
-        return num*tailRecursion(num-1);
+        return num*tailFactorial(num-1);
+    }
+
+    public void headRec(int num){
+        int outNum =0;
+        if (num==0){
+            return;
+        }
+        headRec(num-1);
+        System.out.println(num);
     }
 }
 
