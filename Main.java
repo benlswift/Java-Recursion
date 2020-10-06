@@ -5,10 +5,10 @@ public class Main {
     public static void main(String[] args) {
         Recursion recursion = new Recursion();
         Iteration iteration = new Iteration();
+        Fibonacci fibonacci = new Fibonacci();
 
-        recursion.recFibonacci(0,1,10);
-
-        recursion.factorialRecursion(5);
+        fibonacci.startFibonacci(0,1,10);
+        System.out.println("\n---Factorial Recursion---\n" + recursion.factorialRecursion(5));
 
         System.out.println("---Head recursion---");
         recursion.headRec(5);
