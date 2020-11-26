@@ -1,4 +1,4 @@
-package com.company;
+package com.sparta.ben;
 
 public class Recursion {
 
@@ -7,11 +7,10 @@ public class Recursion {
             return 1;
         }
         int outputValue = 1;
-        outputValue=num*factorialRecursion(num-1);//multiply last number by next number, recursively
+        outputValue=num*factorialRecursion(num-1);
         return outputValue;
     }
 
-    //Head and Tail recursive factorials
     public int headFactorial(int num){
         int outNum =0;
         if(num > 0){
@@ -25,29 +24,27 @@ public class Recursion {
         if(num == 0){//stop when number is 0
             return 1;
         }
-        return num*tailFactorial(num-1);//count down from n
+        return num*tailFactorial(num-1);
     }
 
-    public int tailRec(int num){
+    public int tailRecursion(int num){
         if (num==0){
             return 0;
         }
-        System.out.println(num);
-        return tailRec(num-1);
+        Printer.printMessage(num);
+        return tailRecursion(num-1);
     }
 
-    //basic head & tail recursions
 
-
-    public void headRec(int num){
+    public void headRecursion(int num){
 
         if (num!=0){//stop at 0
-            headRec(num-1);
+            headRecursion(num-1);
         }
         else{
             return;
         }
-        System.out.println(num);
+        Printer.printMessage(num);
     }
 }
 

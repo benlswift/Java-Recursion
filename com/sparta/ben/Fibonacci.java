@@ -1,4 +1,4 @@
-package com.company;
+package com.sparta.ben;
 
 public class Fibonacci {
     //recursive Fibonacci
@@ -8,16 +8,15 @@ public class Fibonacci {
             output = start + second;//add last 2 numbers together
             start = second;
             second = output;
-            System.out.print(output+" ");
+            Printer.printMessage(output+" ");
             recursiveFibonacci(start, second, count-1);//recursion
         }
     }
 
     public void startFibonacci(int startNum, int secondNum,int end){
-        Printer print = new Printer();
         if (startNum ==0 && secondNum ==1) {//print out first Fibonacci number, 0
-            System.out.println("---Fibonacci Sequence---");
-            print.fibonacciPrint(startNum);
+            Printer.printMessage("---Fibonacci Sequence---");
+            Printer.fibonacciPrint(startNum);
         }
         recursiveFibonacci(startNum,secondNum,end-1);
 
